@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function (event) {
   let hamburgerOpen = document.querySelector(".hamburger_open_js")
   let hamburgerClose = document.querySelector(".hamburger_close_js")
@@ -34,7 +33,7 @@ window.addEventListener('load', function (event) {
   const anchors = document.querySelectorAll('a.scroll-to')
 
   for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function (e) {
       e.preventDefault()
 
       const blockID = anchor.getAttribute('href')
