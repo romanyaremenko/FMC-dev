@@ -1,0 +1,133 @@
+* {
+  font-family: "Roboto",sans-serif;
+  a {
+    text-decoration: none;
+  }
+}
+
+.subtitle {
+  color: #3B497E;
+  font-weight: 500;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+  &_item {
+    span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 140%;
+      color: #373A41;
+    }
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &_item__active {
+    width: 26px;
+    height: 26px;
+    background: #FFA4D5;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      color: #FFFFFF;
+    }
+  }
+  &_separator{
+    span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 140%;
+      color: #373A41;
+    }
+    margin: 0 6px 0 16px;
+  }
+  &__not_active {
+    svg {
+      path {
+        fill:#BDBDBD;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 140%;
+  color: #3B497E;
+  display: none;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: 50px;
+  z-index: 3;
+  position: relative;
+  @media (min-width: 992px) {
+    display: flex;
+  }
+  a {
+    color: #3B497E;
+  }
+  &_item {
+    margin-right: 8px;
+  }
+}
+
+.wrapper {
+  max-width: 970px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+
+[data-tooltip] {
+  position: relative;
+  cursor: help;
+  font-size: 14px;
+  line-height: 140%;
+  @media (min-width: 768px) {
+    display: inline;
+    color: #51555F;
+    background: rgba(255, 164, 213, 0.4);
+    padding: 4px;
+    border-radius: 45px;
+  }
+}
+
+[data-tooltip]::after {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  content: attr(data-tooltip);
+  left: 0;
+  top: calc(100% + 10px);
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  z-index: 10;
+  padding: 8px;
+  width: 530px;
+  //transform: translateY(-20px);
+  transition: all 150ms cubic-bezier(.25, .8, .25, 1);
+  //transform: translateX(-500px);
+  transform: translate3d(-500px, -20px, 0);
+  padding: 16px;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translate3d(-500px,0, 0);
+  transition-duration: 300ms;
+}
