@@ -2,9 +2,9 @@
   padding: 12px 0;
   background: #465485;
   position: relative;
-  //z-index: 1000;
+  z-index: 1000;
   z-index: 50;
-  margin-bottom: 80px;
+  //margin-bottom: 30px;
   &_content {
     display: flex;
     align-items: center;
@@ -122,30 +122,44 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  position: absolute;
-  top: 50px;
+  //position: absolute;
+  //top: 50px;
   z-index: 1;
+  position: relative;
+  max-width: 1435px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
   @media (min-width: 992px) {
-    top: 0;
+    margin-top: -30px;
   }
+
   img {
     width: 100%;
-    max-height: 65px;
+    //max-height: 65px;
     height: 100%;
     @media (min-width: 992px) {
       max-height: 185px;
     }
   }
   &__mob {
+    display: none;
     @media (min-width: 992px) {
       display: none;
     }
   }
   &__desk {
-    display: none;
+    //display: none;
     @media (min-width: 992px) {
       display: block;
     }
+  }
+  &:after {
+    content: url("../../src/img/butterfly_desk.svg");
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    z-index: 50;
   }
 }
 .hamburger {
