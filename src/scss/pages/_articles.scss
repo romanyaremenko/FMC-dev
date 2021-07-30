@@ -6,6 +6,7 @@
     border-radius: 0px 0px 45px 45px;
     position: relative;
     z-index: 5;
+    padding-bottom: 100px;
     @media (min-width: 992px) {
       background: #FFF7FB;
     }
@@ -228,7 +229,7 @@
     z-index: 5;
     display: none;
     @media (min-width: 992px) {
-      display: none;
+      display: block;
     }
     .flowers_left {
       position: absolute;
@@ -377,6 +378,7 @@
     border-radius: 0px 0px 45px 45px;
     position: relative;
     //margin-top: 75px;
+    //padding-bottom: 50px;
     &:before {
       //content: url("../../src/img/top_line_bg.svg");
       position: absolute;
@@ -386,7 +388,7 @@
       width: 100%;
     }
     &:after {
-      content: url("../../src/img/bottom_line_bg.svg");
+      //content: url("../../src/img/bottom_line_bg.svg");
       position: absolute;
       left: 0;
       right: 0;
@@ -398,7 +400,7 @@
     background: white;
     margin-top: 0;
     .wrapper {
-      padding-bottom: 50px;
+      padding-bottom: 100px;
       //@media (min-width: 992px) {
       //  padding-bottom: 100px;
       //}
@@ -634,13 +636,14 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: -40px;
     @media (min-width: 992px) {
-      margin-top: -80px;
+      //margin-top: -80px;
     }
 
     .line {
       &_desk {
-        display: none;
+        display: block;
         @media (min-width: 992px) {
           display: block;
         }
@@ -650,6 +653,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        display: none;
         @media (min-width: 992px) {
           display: none;
         }
